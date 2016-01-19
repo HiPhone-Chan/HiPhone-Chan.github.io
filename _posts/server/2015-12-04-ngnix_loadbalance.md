@@ -20,6 +20,8 @@ ngnix 简单负载均衡配置
 
         location / {
             proxy_pass   http://chf.com;
+            proxy_set_header  x-forwarded-for $proxy_add_x_forwarded_for; // 设置请求头
+            add_header  'Access-Control-Allow-Origin' '*'; // 设置响应头
         }
     }
 ```
