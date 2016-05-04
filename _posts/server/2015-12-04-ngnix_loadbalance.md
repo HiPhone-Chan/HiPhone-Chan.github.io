@@ -26,6 +26,14 @@ ngnix 简单负载均衡配置
     }
 ```
 
+## ngnix对websocket进行代理
+
+  需要显式的设置Upgrade和Connection的头信息
+```shell
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Connection "upgrade";
+```
+
 # 相关命令
 
 * ngnix -s reload #重新加载配置文件
