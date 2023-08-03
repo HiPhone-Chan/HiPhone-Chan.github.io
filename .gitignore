@@ -1,2 +1,6 @@
 /_site
 *.lock
+puml
+out
+
+.DS_Store

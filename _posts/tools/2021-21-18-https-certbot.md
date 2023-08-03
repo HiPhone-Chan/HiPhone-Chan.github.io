@@ -14,5 +14,10 @@ https
 
 ```
 
+# 生成证书后再添加新域名
+```
+certbot --expand -d domain.com
+```
+
 # 参考
 https://certbot.eff.org
